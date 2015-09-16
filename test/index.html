@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sidebar Transitions</title>
+		
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="main.css">
+<script src="simpleSlider.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		
+	<link rel="stylesheet" href="mobile-menu.css">
+	</head>
+	<body>
+		<div id="st-container" class="st-container">
+			<!-- 	
+				example menus 
+				these menus will be on top of the push wrapper
+			-->
+			<nav class="st-menu st-effect-1" id="menu-1">	
+				<ul class="mob-menu-list">
+					<li class="mob-menu-input"><input type="text" placeholder="search"></li>
+					<li><a class="icon" href="#">home</a></li>
+					<li>
+						<a class="icon sub-menu-reveal" id="click-to-drop" href="#">women</a>
+						<ul class="sub-menu-mob" style="display:none;">
+							<li><a href="#">all clothing</a></li>
+							<li><a href="#">accessoires</a></li>
+							<li><a href="#">basics</a></li>
+							<li><a href="#">dresses</a></li>
+							<li><a href="#">jackets</a></li>
+							<li><a href="#">jeans</a></li>
+							<li><a href="#">pants</a></li>
+							<li><a href="#">shirts</a></li>
+							<li><a href="#">skirts</a></li>
+							<li><a href="#">sweaters</a></li>
+						</ul>
+					</li>
+					<li><a class="icon" href="#">men</a></li>
+					<li><a class="icon" href="#">experience</a></li>
+					<li class="login"><a class="icon" href="#">login / sign up</a></li>
+					<li class="ned"><a class="icon" href="#">Nederland</a></li>
+					<li class="wishlist"><a class="icon" href="#">wishlist: 0</a></li>
+					<li><a class="icon" href="#">help</a></li>
+					<li><a class="icon" href="#">about us</a></li>
+					<li><a class="icon" href="#">privacy policy</a></li>
+					<li><a class="icon" href="#">terms & conditions</a></li>
+				
+				</ul>
+			</nav>
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+				<!-- 	
+					example menus 
+					these menus will be under the push wrapper
+				-->
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<!-- Top Navigation -->
+						<section class="topContent">
+						<a href="#" class="close"></a>
+						<!--Product-->
+							<aside class="product_wrap">
+								<div class="product">
+									<h2>Product</h2>
+									<span class="shirt-img">
+										<img src="img/t-shirt.jpg" alt="">
+									</span>
+									<p class="shirt">
+										<span>Black dress-shirt</span> <br>
+										<span>Productnr.:5648154</span> <br>
+										<a href="#">edit</a>
+										<a href="#">remove</a>
+									</p>
+								</div>
+								<div class="quantity">
+									
+									<div class="select">
+										<p>Quantity</p>
+										<div class="styled-select">
+										   <select>
+										      <option>1</option>
+										      <option>2</option>
+										      <option>3</option>
+										   </select>
+										</div>
+									</div>
+									
+									<div class="round-wrap">
+										<p>Color</p>
+										<div class="round-button">
+											<div class="inner_button"></div>
+										</div>
+
+										<div class="round-button-size">
+											<p>m</p>
+										</div>
+									</div>
+									<div class="price">
+										<p>Price </p><br> 
+										<span>€100</span>
+									</div>
+									
+								</div>
+							</aside>
+						<!--Vaucher-->
+							<aside class="vaucher_wrap">
+								<div class="vaucher">
+									<p>have a voucher code?</p>
+									<a href="#">fill in your code</a>
+								</div>
+								<div class="total">
+									<div class="subtotal">
+										<p>
+											Subtotal <br>
+											Indication delivery cost <br>
+											Order total
+										</p>
+									</div>
+									<div class="price">
+										<p>
+											<span>€100</span> <br>
+											<span>€0</span> <br>
+											<span>€100</span>
+										</p>
+									</div>
+								</div>
+							</aside>
+						<!--Order-->
+							<aside class="order_wrap">
+								<div class="order"> 
+									<p>Order shipped within 1 buisness day <br>
+									30-day return guaranttee</p>
+								</div>
+								<div class="cards">
+									<p>	We accept:</p>
+									<a href="#" class="secure_button">SECURE CHECKOUT <span class="button_link_arrow"> > </span> </a>
+								</div>
+							</aside>
+						</section> 
+<!--Mobile menu Mobile menu Mobile menu Mobile menu Mobile menu Mobile menu Mobile menu Mobile menu Mobile menu -->
+						<div class="main clearfix">
+							<div id="st-trigger-effects" class="column">
+								<button data-effect="st-effect-1">&nbsp</button>
+								<div class="header_section_mob1">
+									<h1>
+										<a href="#">
+											<img src="img/logo.png" alt="logo" rel="">
+										</a>
+									</h1>
+								</div>
+								<div class="header_section_mob2">
+									
+									<a href="#" id="reveal_top_content"><span>2</span></a>	
+								</div>
+								<div class="stores_search_wrap">
+									<div class="stores">
+										<h3><a href="#">stores</a></h3>
+									</div>
+									<div class="search_mobile">
+										<a href="#" class="reveal2"><span>search</span></a>
+										<div id="details2">
+											<input type="search" id="search">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							
+						</div><!-- /main -->
+					
+<!--Header Header Header Header Header Header Header Header Header -->
+						<section class="wrap_content">
+							<header id="top">
+								<div class="header_section1">
+									<a href="#"><span>NL</span></a>
+									<a href="#">login</a> /
+									<a href="#">sign up</a>
+								</div>
+								<div class="header_section2">
+									<h1>
+										<a href="#">
+											<img src="img/logo.png" alt="logo" rel="">
+										</a>
+									</h1>
+								</div>
+								<div class="header_section3">
+									<a href="#"><span>0</span></a>
+									<a href="#" id="reveal_top_content2"><span>2</span></a>	
+								</div>
+							</header>
+<!--Navigation Navigation Navigation Navigation Navigation Navigation Navigation -->
+						<nav class="main-nav-top">
+							<ul id="menu">
+						     
+							    <li><a href="#" class="drop"><img src="img/home.png" alt=""></a></li>
+							    <li><a href="#" class="drop">women</a></li>
+							    <li>
+						    		<a href="#" class="drop">men</a>
+						        	<div class="dropdown_4columns">
+							            <div class="col_1">
+							                <h3>featured</h3>
+							                <ul>
+							                    <li><a href="#">new arrivals</a></li>
+							                    <li><a href="#">best sellers</a></li>
+							                    <li><a href="#">sale</a></li>
+							                </ul>     
+							            </div>
+							            <div class="col_2">
+							                <h3>categories</h3>
+							                <ul>
+							                    <li><a href="#">all clothing</a></li>
+							                    <li><a href="#">accesories</a></li>
+							                    <li><a href="#">basics</a></li>
+							                    <li><a href="#">dresses</a></li>
+							                    <li><a href="#">jackets</a></li>
+							                    <li><a href="#">jeans</a></li>
+							                </ul>   
+							            </div>
+							            <div class="col_3">
+							                <ul>
+							                    <li><a href="#">jeans</a></li>
+							                    <li><a href="#">pants</a></li>
+							                    <li><a href="#">shirts</a></li>
+							                    <li><a href="#">skirts</a></li>
+							                    <li><a href="#">sweaters</a></li>
+							                    <li><a href="#">tops</a></li>
+							                </ul>    
+							            </div>
+							            <div class="col_4">
+							                <h3>lookbooks</h3>
+							                <ul>
+							                    <li><a href="#">summer 2014</a></li>
+							                    <li><a href="#">spring 2014</a></li>
+							                </ul>   
+							            </div>
+							             <div class="col_5">
+							             	<h2 class="sale">sale</h2>
+							             	<h3 class="disc">20% discount</h3>
+							             </div>
+						        	</div>
+						    	</li>
+						 
+						    	<li>
+						   			<a href="#" class="drop">experience</a>
+						    	</li>
+								
+							</ul>
+							
+						</nav>
+<!--Search Search Search Search Search Search Search Search Search Search Search -->
+						<div class="search_button">
+										
+								<a href="#" class="reveal"><span>search</span></a>
+								<div id="details" style="display:none;">
+									
+									  <div class="container-4">
+										<div class="border_search">
+											
+										</div>
+									    <input type="search" id="search">
+									   
+										<a href="#" class="icon">SEARCH <span class="button_link_arrow"> > </span></a>
+									  </div>
+								</div>
+						</div>
+
+<!--SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER SLIDER -->
+
+							<div class="big_title">
+								<h2>TODAY</h2>
+								<h3>SHOP OUR NEW ARRIVAL</h3>
+							</div>
+								<div id="slider">
+								<ul class="slides">
+									<li class="slide">
+										
+										<img class="slideImage" alt="img1" src="img/image-1.jpg"/>
+									</li>
+									<li class="slide">
+										
+										<img class="slideImage" alt="img2" src="img/image-2.jpg"/>
+									</li>
+									<li class="slide">
+										
+										<img class="slideImage" alt="img3" src="img/image-4.jpg"/>
+									</li>
+
+								</ul>
+							</div>
+						</section>
+
+						<section class="shop_wrap">
+								<aside>
+									<article class="women">
+										<h2>shop women</h2>	
+									</article>
+									<article class="men">
+										<h2>shop men</h2>
+									</article>
+								</aside>
+						</section>
+
+						<div class="deliv">
+							<h2>free delivery & returns on UK orders</h2>
+						</div>
+<!--ABOUT PRODUCTS ABOUT PRODUCTS ABOUT PRODUCTS ABOUT PRODUCTS ABOUT PRODUCTS -->
+						<section class="about_products_wrap">
+							<aside class="products_wrap">
+								<article>
+									<div>
+										<img src="img/girlandbag.jpg" alt="">
+									</div>
+									<div>
+										<h2>Today Love dresses</h2>	
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										</p>
+										<a href="#">READ MORE <span class="button_link_arrow"> > </span> </a>
+									</div>
+								</article>
+								<article>
+									<div>
+										<img src="img/bag.jpg" class="bag" alt="">
+									</div>
+									<div>
+										<h2>The everyday bag</h2>	
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+										</p>
+										<a href="#">READ MORE <span class="button_link_arrow"> > </span> </a>
+									</div>
+								</article>
+							</aside>
+						</section>
+<!--footer footer footer footer footer footer footer -->
+						<footer>
+							<aside>
+								<article class="foo_menu_wrap">
+									<ul class="foo_menu">
+										<li><a href="">help</a></li>
+										<li><a href="">about us</a></li>
+										<li><a href="">privacy policy</a></li>
+										<li><a href="">terms & conditions</a></li>
+									</ul>
+								</article>
+								<article class="foo_input_wrap">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+									<div class="foo_input">
+										<div class="input-list style-1 clearfix">
+								            <input type="text" placeholder="Your email address">
+								        </div>
+									</div>
+									<div class="foo_btn_wrap">
+										<ul>
+											<li><a href="#" class="foo_btn1">WOMEN <span class="button_link_arrow"> > </span></a></li>
+											<li><a href="#" class="foo_btn2">MEN <span class="button_link_arrow"> > </span></a></li>
+											<li><a href="#" class="foo_btn3">BOTH <span class="button_link_arrow"> > </span></a></li>
+										</ul>
+									</div>
+								</article>
+								<article class="foo_location_wrap">
+									<p>
+									33G King's Rd, London	
+									<br>+44 20 7730 6787</p>
+									<a href="#">MORE INFORMATION <span class="button_link_arrow"> > </span> </a>
+								</article>
+							</aside>
+							<div class="foo_bottom">
+								<div class="copyright">
+									<p>copyright 2014</p>
+								</div>
+								<div class="social">
+									<div class="soc_center">
+										<a href="#"><i class="fa fa-pinterest-p"></i></a>
+										<a href="#"><i class="fa fa-google-plus"></i></a>
+										<a href="#"><i class="fa fa-youtube"></i></a>
+										<a href="#"><i class="fa fa-camera"></i></a>
+										<a href="#"><i class="fa fa-twitter"></i></a>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</div>
+								</div>
+							</div>
+						</footer>
+					</div><!-- /st-content-inner -->
+					
+				</div><!-- /st-content -->
+
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
+		<script src="js/classie.js"></script>
+		<script src="js/sidebarEffects.js"></script>
+<script>
+	
+	$(document).ready(function(){
+    $(".reveal").click(function(){
+        $("#details").slideToggle("fast");
+   		});
+    $(".reveal2").click(function(){
+        $("#details2").slideToggle("fast");
+   		});
+	});
+
+	
+
+</script>
+<script>
+	$(document).ready(function(){
+    $(".sub-menu-reveal").click(function(){
+        $(".sub-menu-mob").slideToggle("fast");
+
+   		});
+	});
+</script>
+<script>
+	$("#click-to-drop").click(function() {
+    $(this).toggleClass('sub-menu-reveal  sub-menu-close');
+});
+</script>
+
+<script> 
+    $(function() {
+        $("#reveal_top_content").click(toggleTopContent);
+    });
+    $(function() {
+        $("#reveal_top_content2").click(toggleTopContent);
+    });
+ 	 $(function() {
+        $(".close").click(toggleTopContent);
+    });
+ 
+    function toggleTopContent() {
+      var topContent = $(".topContent");
+      var bottomContent = $("#top");
+ 
+      if(!topContent.is(":hidden")) {
+        topContent.slideUp("slow");
+      } else {
+        
+        $(".topContent").slideDown("slow");
+        //("#Container").slideUp("slow");
+      }
+    }
+</script>
+
+	<script>
+	$( "#slider" ).simpleSlider();
+</script>
+
+		
+	</body>
+</html>

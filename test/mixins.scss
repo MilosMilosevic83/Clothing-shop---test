@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Sofia Pro Bold";
+    src: url("Fonts/mostardesign-sofia-pro-light.eot?") format("eot"),
+         url("Fonts/mostardesign-sofia-pro-light.woff2") format("woff2"),
+         url("Fonts/mostardesign-sofia-pro-light.woff") format("woff"),
+         url("Fonts/mostardesign-sofia-pro-light.ttf") format("truetype"),
+         url("Fonts/mostardesign-sofia-pro-light.svg#Samplino") format("svg");
+}
+$font:"Sofia Pro Bold" ,Arial;
+$main-color: #002D47;
+@mixin border_reset {
+	padding:0;
+	margin: 0;
+}
+@mixin links_drop_down {
+		font-size:14px; 
+		color: $main-color;
+		display:block;
+		text-decoration:none;
+		padding-left:45%;
+		letter-spacing: 1px;
+		font-weight: 600;
+		&:hover {
+				color:#000;
+			}
+	} 
+@mixin header_sec {
+	width: 33.33%;
+	float: left;
+	@include border_reset;
+}
+@mixin header_links {
+	text-decoration: none;
+	color:$main-color;
+	display:inline-block;
+}
+@mixin aside_wrapp {
+	width: 100%;
+	float:left;
+	border-bottom:1px solid #EBECED;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+@mixin floated{
+	width: 50%;
+	float: left;
+	@include border_reset; 
+}
+@mixin close_section{
+	position:absolute;
+	top:0;
+	right: 10px;
+	display: block;
+}
+@mixin buttons {
+	color: #fff;
+	padding: 9px 18px;
+	background-color:$main-color;
+	text-decoration: none;
+	white-space: nowrap; 
+	font-weight: 600;
+	margin: 0 0 0 1em; 
+	margin-top: -15px;
+	float: left;
+	font-size:1em;
+}
+@mixin centered {
+	width: 100%;
+	max-width: 1040px;
+	margin:0 auto;
+}
+
+
+@mixin col {
+    float: left;
+    @include border_reset;
+     width:20%;
+	}
+@mixin DropDownContent{
+    line-height:21px;
+    font-size:17px;
+    text-align:left;
+   padding-left:10%;
+	}
+@mixin products_el_style{
+	width:90%;
+	padding-left:20px;
+	padding-top:15px;
+	margin-right:20px;
+	color:$main-color;
+	float:left;
+}
+@mixin wrap_1{
+	width:100%;
+	float:left;
+	color:$main-color;
+}
+@mixin wrap_2 {
+	border-top:$border;
+		border-bottom:$border;
+		@include centered;
+		overflow: hidden;
+		padding-bottom:20px;
+}
+
+@mixin foo {
+	width: 100%;
+	float: left;
+}	
+@mixin breakpoint($point) {
+			@if $point == big_screen1 {
+				@media (max-width: 1020px) { @content; }
+			}
+			@else if $point == big_screen2 {
+				@media (max-width: 950px) { @content; }
+			}
+			@else if $point == big_screen3 {
+				@media (max-width: 900px) { @content; }
+			}
+			@else if $point == big_screen4 {
+				@media (max-width: 850px) { @content; }
+			}
+			@else if $point == medium_screen1 {
+				@media (max-width: 768px) { @content; }
+			}
+			@else if $point == medium_screen2 {
+				@media (max-width: 640px) { @content; }
+			}
+			@else if $point == medium_screen3 {
+				@media (max-width: 480px) { @content; }
+			}
+			@else if $point == small_screen1 {
+				@media (max-width: 400px) { @content; }
+			}
+			@else if $point == small_screen2 {
+				@media (max-width: 320px) { @content; }
+			}
+		}
+
+@mixin w_m_back{
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	padding: 15% 0;
+}
+@mixin transition($box-shadow,$border) {
+						-webkit-transition: $box-shadow,$border;
+						  -moz-transition: $box-shadow,$border;
+						  -o-transition: $box-shadow,$border;
+						  transition: $box-shadow,$border;
+						}
